@@ -7,8 +7,8 @@ plugins {
 
 android {
     namespace = "miru.miaomint"
-    compileSdk = flutter.compileSdkVersion
-    ndkVersion = flutter.ndkVersion
+    compileSdk = 31
+    ndkVersion = "25.1.8937393"
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
@@ -29,42 +29,13 @@ android {
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion = 21
-        // Cannot be changed or bt-server will not start.
-        targetSdkVersion = 28
+        // Updated to support android:attr/lStar
+        targetSdkVersion = 31
         versionCode = flutter.versionCode
         versionName = flutter.versionName
     }
 
-    // signingConfigs {
-    //     release {
-    //         storeFile = _storeFile
-    //         storePassword = _storePassword
-    //         keyAlias = _keyAlias
-    //         keyPassword = _keyPassword
-    //         v1SigningEnabled = true
-    //         v2SigningEnabled = true
-    //     }
-    //     debug {
-    //         storeFile = _storeFile
-    //         storePassword = _storePassword
-    //         keyAlias = _keyAlias
-    //         keyPassword = _keyPassword
-    //         v1SigningEnabled = true
-    //         v2SigningEnabled = true
-    //     }
-    // }
-    
     buildTypes {
-        // release {
-        //     if (signingConfigs.release.storePassword != null){
-        //         signingConfig = signingConfigs.release
-        //     }
-        // }
-        // debug {
-        //     if (signingConfigs.debug.storePassword != null){
-        //         signingConfig = signingConfigs.release
-        //     }
-        // }
         release {
             // TODO: Add your own signing config for the release build.
             // Signing with the debug keys for now, so `flutter run --release` works.
@@ -78,7 +49,7 @@ flutter {
 }
 
 dependencies {
-
+    // Add your dependencies here
 }
 
 // ext.abiCodes = ["x86_64": 1, "armeabi-v7a": 2, "arm64-v8a": 3]

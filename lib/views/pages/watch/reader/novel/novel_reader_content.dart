@@ -70,7 +70,7 @@ class _NovelReaderContentState extends State<NovelReaderContent> {
                   return Padding(
                     padding: const EdgeInsets.only(bottom: 20),
                     child: Text(
-                      _c.title + _c.playList[_c.playIndex].name,
+                      watchData.title,
                       style: const TextStyle(fontSize: 26),
                     ),
                   );
